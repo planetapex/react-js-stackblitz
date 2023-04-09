@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Image from 'react-bootstrap/ Image';
-import BrandLogo from '../images/logo_mark.png';
+import Image from 'react-bootstrap/Image';
+import { BrandLogo } from '/main/src/logo.png';
 
-export const NavigationBar = () => {
+const NavigationBar = () => {
   return (
     <div>
       <Navbar.Brand href="/" className="d-f1ex p-4 pb-0">
         <Image
           src={BrandLogo}
+          // src="https://stackblitz.com/files/react-99avqn/github/planetapex/react-js-stackblitz/main/src/images.png"
           height="30"
           className="aLign-top"
           alt="Company Logo"
@@ -18,3 +19,5 @@ export const NavigationBar = () => {
     </div>
   );
 };
+
+export default NavigationBar;
