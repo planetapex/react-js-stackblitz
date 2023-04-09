@@ -24,11 +24,11 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/blog" element={<BlogPage />} />
-        <Route exact path="/contact" element={<ContactPage />} />
+         <Route exact path="/contact" element={<ContactPage />} />
         <Route exact path="/about" element={<AboutPage />} />
-        <Route>
+        {/*<Route>
           <ErrorPage />
-        </Route>
+        </Route> */}
       </Routes>
 
       <h1>Hello StackBlitz! {getTime()} </h1>
