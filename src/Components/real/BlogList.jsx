@@ -15,17 +15,17 @@ function BlogList() {
   const [post, setPost] = React.useState(null);
   const [error, setError] = React.useState(null);
 
-  React.useEffect(() => {
-    api
-      .get('/1')
-      .then((response) => {
-        console.log(response);
-        setPost(response.data);
-      })
-      .catch((error) => {
-        setError(error);
-      });
-  }, []);
+  // React.useEffect(() => {
+  //   api
+  //     .get('/1')
+  //     .then((response) => {
+  //       console.log(response);
+  //       setPost(response.data);
+  //     })
+  //     .catch((error) => {
+  //       setError(error);
+  //     });
+  // }, []);
 
   if (error) return `Error: ${error.message}`;
   if (!post) return 'No post!';
