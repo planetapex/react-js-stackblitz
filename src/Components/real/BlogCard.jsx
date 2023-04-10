@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-const BlogCard = ({ id, title, body }) => {
+const BlogCard = ({ id, title, body , imageURL}) => {
   return (
     <Card key={id}>
       <Card.Img
@@ -9,7 +9,7 @@ const BlogCard = ({ id, title, body }) => {
         width="100"
         height="360"
         variant="top"
-        src="https://placekitten.com/100/200"
+        src={imageURL}
       />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
