@@ -1,28 +1,32 @@
 import React from 'react';
 import axios from 'axios';
-
-const apiClient = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com/posts',
-});
+// import blogApi from '../../data/blogApi';
 
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import BlogCard from './BlogCard';
 
+const api = axios.create({
+  baseURL: 'https://jsonplaceholder.typicode.com/posts',
+});
+
 function BlogList() {
+  // const [responseData, setResponseData] = React.useState('');
   const [post, setPost] = React.useState(null);
   const [error, setError] = React.useState(null);
 
-  useEffect(() => {
-    apiClient
+  React.useEffect(() => {
+    api
       .get('/1')
       .then((response) => {
+        console.log(response);
         setPost(response.data);
       })
       .catch((error) => {
         setError(error);
       });
   }, []);
+
   if (error) return `Error: ${error.message}`;
   if (!post) return 'No post!';
   return (
